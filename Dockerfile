@@ -5,10 +5,12 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 # Copy Main.java
-COPY Main.java .
+COPY src/Main.java .
 
 # Compile Java
 RUN javac Main.java
+
+EXPOSE 8081
 
 # Run the program
 CMD ["java", "Main"]
