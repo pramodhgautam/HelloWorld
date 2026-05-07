@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 # Copy Main.java
-COPY src/Main.java .
+COPY src/main/Main.java .
 
 # Compile Java
 RUN javac Main.java

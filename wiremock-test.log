@@ -1,0 +1,13 @@
+2026-05-07 22:48:20.510 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.18; built: 2023-10-27T02:14:36.036Z; git: 5a9a771a9fbcb9d36993630850f612581b78c13f; jvm 21.0.8+12-LTS-250
+2026-05-07 22:48:20.533 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@777c9dc9{/__admin,null,AVAILABLE}
+2026-05-07 22:48:20.538 [main] INFO  o.e.j.s.handler.ContextHandler.ROOT - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+2026-05-07 22:48:20.538 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@6bb7cce7{/,null,AVAILABLE}
+2026-05-07 22:48:20.544 [main] INFO  o.e.jetty.server.AbstractConnector - Started NetworkTrafficServerConnector@781f10f2{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8080}
+2026-05-07 22:48:20.550 [main] INFO  org.eclipse.jetty.server.Server - Started Server@4d4d8fcf{STARTING}[11.0.18,sto=1000] @988ms
+2026-05-07 22:48:20.551 [main] INFO  com.example.FinacleWireMockServer - WireMock Server started on port 8080
+2026-05-07 22:48:20.583 [main] INFO  com.example.AdvancedWireMockConfig - Configuring advanced WireMock scenarios...
+2026-05-07 22:48:20.584 [main] INFO  com.example.FinacleWireMockServer - Mock APIs configured successfully
+2026-05-07 22:48:20.584 [main] INFO  com.example.FinacleWireMockServer - Available endpoints:
+2026-05-07 22:48:20.584 [main] INFO  com.example.FinacleWireMockServer -   POST http://localhost:8080/api/Auth - Get authentication token
+2026-05-07 22:48:20.584 [main] INFO  com.example.FinacleWireMockServer -   POST http://localhost:8080/api/v1/CorporatePay/GetCorporatePayStatement - Get statement
+2026-05-07 22:48:20.584 [main] INFO  com.example.FinacleWireMockServer -   POST http://localhost:8080/api/v1/CorporatePay/RaiseDispute - Raise dispute for transaction
