@@ -1,0 +1,21 @@
+{
+  "priority": 1,
+  "id": "550e8400-e29b-41d4-a716-446655440001",
+  "request": {
+    "method": "POST",
+    "url": "/api/Auth"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImp0aSI6IjljN2UzNjQzLTY2ZjctNDk0NS1iYzRiLWJlYzc4Yzc1Y2E2NCIsImV4cCI6MTc2OTY4MzIyMSwiaXNzIjoiaHR0cHM6Ly93d3cubm1iYmFuay5jb20ubnAifQ.BAJh1I3zeODheYAu7ZXPTVc65ZBrwhrKfMdntyLMPo0",
+      "token_type": "Bearer",
+      "Status": true,
+      "message": "Success"
+    }
+  }
+}
+

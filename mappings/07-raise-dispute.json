@@ -1,0 +1,40 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440007",
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "url": "/api/v1/CorporatePay/RaiseDispute",
+    "headers": {
+      "Authorization": {
+        "matches": "Bearer .*"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "Response": {
+        "ResponseCode": "000",
+        "ResponseMessage": "Dispute raised successfully"
+      },
+      "Result": {
+        "DisputeId": "DSP20260507001",
+        "TranId": "S544447560",
+        "DisputeDate": "07/05/2026",
+        "DisputeReason": "Unauthorized transaction",
+        "Remarks": "Transaction not authorized by account holder",
+        "Status": "INITIATED",
+        "Amount": "100.00",
+        "DisputeAmount": "100.00",
+        "ReferenceNumber": "REF-DSP-20260507-001"
+      }
+    }
+  }
+}
+

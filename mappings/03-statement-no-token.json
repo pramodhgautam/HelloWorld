@@ -1,0 +1,27 @@
+{
+  "priority": 9,
+  "id": "550e8400-e29b-41d4-a716-446655440003",
+  "priority": 2,
+  "request": {
+    "method": "POST",
+    "url": "/api/v1/CorporatePay/GetCorporatePayStatement",
+    "headers": {
+      "Authorization": {
+        "absent": true
+      }
+    }
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "Response": {
+        "ResponseCode": "401",
+        "ResponseMessage": "Unauthorized - Token required"
+      }
+    }
+  }
+}
+

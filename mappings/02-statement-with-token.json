@@ -1,0 +1,65 @@
+{
+  "priority": 1,
+  "id": "550e8400-e29b-41d4-a716-446655440002",
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "url": "/api/v1/CorporatePay/GetCorporatePayStatement",
+    "headers": {
+      "Authorization": {
+        "matches": "Bearer .*"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "Response": {
+        "ResponseCode": "000",
+        "ResponseMessage": "Success"
+      },
+      "Result": [
+        {
+          "SN": 1,
+          "TranId": "S544447560",
+          "TranSrlNo": "1",
+          "TranDate": "10/04/2024",
+          "TranAmount": "100.00",
+          "TranType": "D",
+          "ChequeNumber": null,
+          "TranParticular": "48313213123/NTC PREPAID/984000000",
+          "TranRemarks": "98416XXX1630//190031",
+          "Balance": "1,036,206,629.39"
+        },
+        {
+          "SN": 2,
+          "TranId": "S544447561",
+          "TranSrlNo": "2",
+          "TranDate": "09/04/2024",
+          "TranAmount": "5000.00",
+          "TranType": "C",
+          "ChequeNumber": null,
+          "TranParticular": "PAYMENT RECEIVED",
+          "TranRemarks": "Online Transfer",
+          "Balance": "1,036,206,529.39"
+        },
+        {
+          "SN": 3,
+          "TranId": "S544447562",
+          "TranSrlNo": "3",
+          "TranDate": "08/04/2024",
+          "TranAmount": "2000.00",
+          "TranType": "D",
+          "ChequeNumber": null,
+          "TranParticular": "SALARY DISBURSEMENT",
+          "TranRemarks": "Monthly Salary",
+          "Balance": "1,036,201,529.39"
+        }
+      ]
+    }
+  }
+}
+

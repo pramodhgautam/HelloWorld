@@ -1,0 +1,32 @@
+{
+  "priority": 11,
+  "id": "550e8400-e29b-41d4-a716-446655440006",
+  "request": {
+    "method": "POST",
+    "url": "/api/v1/CorporatePay/GetCorporatePayStatement",
+    "headers": {
+      "Authorization": {
+        "matches": "Bearer .*"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.StartDate",
+        "equalTo": "invalid-date"
+      }
+    ]
+  },
+  "response": {
+    "status": 500,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "Response": {
+        "ResponseCode": "500",
+        "ResponseMessage": "GlobalExceptionFilter: Something went wrong. Please try again later. The string 'invalid-date' was not recognized as a valid DateTime. There is an unknown word starting at index '0'."
+      }
+    }
+  }
+}
+

@@ -1,0 +1,104 @@
+{
+  "mappings": [
+    {
+      "id": "1",
+      "request": {
+        "method": "POST",
+        "url": "/api/Auth",
+        "bodyPatterns": [
+          {
+            "matchesJsonPath": "$.UserName"
+          },
+          {
+            "matchesJsonPath": "$.Password"
+          }
+        ]
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": {
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImp0aSI6IjljN2UzNjQzLTY2ZjctNDk0NS1iYzRiLWJlYzc4Yzc1Y2E2NCIsImV4cCI6MTc2OTY4MzIyMSwiaXNzIjoiaHR0cHM6Ly93d3cubm1iYmFuay5jb20ubnAifQ.BAJh1I3zeODheYAu7ZXPTVc65ZBrwhrKfMdntyLMPo0",
+          "token_type": "Bearer",
+          "Status": true,
+          "message": "Success"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "request": {
+        "method": "POST",
+        "url": "/api/v1/CorporatePay/GetCorporatePayStatement",
+        "headers": {
+          "Authorization": {
+            "matches": "Bearer .*"
+          }
+        },
+        "bodyPatterns": [
+          {
+            "matchesJsonPath": "$.MerchantId"
+          },
+          {
+            "matchesJsonPath": "$.AccountNumber"
+          }
+        ]
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": {
+          "Status": true,
+          "message": "Success",
+          "MerchantId": "NCHL",
+          "AccountNumber": "99000111165000011",
+          "StartDate": "2024-01-01",
+          "EndDate": "2025-01-04",
+          "Transactions": [
+            {
+              "TransactionId": "TXN001",
+              "Date": "2024-01-15",
+              "Description": "Payment received",
+              "Amount": 5000.00,
+              "Type": "Credit"
+            },
+            {
+              "TransactionId": "TXN002",
+              "Date": "2024-01-20",
+              "Description": "Transfer out",
+              "Amount": 2000.00,
+              "Type": "Debit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "3",
+      "request": {
+        "method": "POST",
+        "url": "/api/v1/CorporatePay/GetCorporatePayStatement",
+        "headers": {
+          "Authorization": {
+            "absent": true
+          }
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": {
+          "Status": false,
+          "message": "Unauthorized - Token required"
+        }
+      }
+    }
+  ]
+}
+

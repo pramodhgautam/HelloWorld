@@ -1,0 +1,32 @@
+{
+  "priority": 10,
+  "id": "550e8400-e29b-41d4-a716-446655440005",
+  "request": {
+    "method": "POST",
+    "url": "/api/v1/CorporatePay/GetCorporatePayStatement",
+    "headers": {
+      "Authorization": {
+        "matches": "Bearer .*"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.AccountNumber",
+        "equalTo": "00000000000000000"
+      }
+    ]
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "Response": {
+        "ResponseCode": "404",
+        "ResponseMessage": "Account not found"
+      }
+    }
+  }
+}
+

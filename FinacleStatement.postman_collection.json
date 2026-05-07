@@ -1,0 +1,147 @@
+{
+  "info": {
+    "_postman_id": "6e69eae0-ceaa-47c1-84e4-da7150818c53",
+    "name": "FinacleStatement",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "9968482",
+    "_collection_link": "https://go.postman.co/collection/9968482-6e69eae0-ceaa-47c1-84e4-da7150818c53?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"UserName\": \"NCHL\",\r\n  \"Password\": \"TEST\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://finaclestatementService.nmbbank.com.np/api/Auth",
+          "protocol": "https",
+          "host": [
+            "finaclestatementService",
+            "nmbbank",
+            "com",
+            "np"
+          ],
+          "path": [
+            "api",
+            "Auth"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Token",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"UserName\": \"NCHL\",\r\n  \"Password\": \"TEST\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://finaclestatementService.nmbbank.com.np/api/Auth",
+              "protocol": "https",
+              "host": [
+                "finaclestatementService",
+                "nmbbank",
+                "com",
+                "np"
+              ],
+              "path": [
+                "api",
+                "Auth"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=480"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 29 Jan 2026 09:40:21 GMT"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImp0aSI6IjljN2UzNjQzLTY2ZjctNDk0NS1iYzRiLWJlYzc4Yzc1Y2E2NCIsImV4cCI6MTc2OTY4MzIyMSwiaXNzIjoiaHR0cHM6Ly93d3cubm1iYmFuay5jb20ubnAifQ.BAJh1I3zeODheYAu7ZXPTVc65ZBrwhrKfMdntyLMPo0\",\n    \"token_type\": \"Bearer\",\n    \"Status\": true,\n    \"message\": \"Success\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Statement",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImp0aSI6IjljN2UzNjQzLTY2ZjctNDk0NS1iYzRiLWJlYzc4Yzc1Y2E2NCIsImV4cCI6MTc2OTY4MzIyMSwiaXNzIjoiaHR0cHM6Ly93d3cubm1iYmFuay5jb20ubnAifQ.BAJh1I3zeODheYAu7ZXPTVc65ZBrwhrKfMdntyLMPo0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"MerchantId\": \"NCHL\",\r\n  \"AccountNumber\": \"99000111165000011\",\r\n  \"StartDate\": \"2024-01-01\",\r\n  \"EndDate\": \"2025-01-04\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://finaclestatementService.nmbbank.com.np/api/v1/CorporatePay/GetCorporatePayStatement",
+          "protocol": "https",
+          "host": [
+            "finaclestatementService",
+            "nmbbank",
+            "com",
+            "np"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "CorporatePay",
+            "GetCorporatePayStatement"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

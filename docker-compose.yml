@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  wiremock:
+    build:
+      context: .
+      dockerfile: Dockerfile.wiremock
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./mappings.json:/home/wiremock/mappings.json
+    environment:
+      - WIREMOCK_PORT=8080
+    container_name: finacle-wiremock
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - finacle-network
+
+networks:
+  finacle-network:
+    driver: bridge
+

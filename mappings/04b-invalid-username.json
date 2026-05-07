@@ -1,0 +1,27 @@
+{
+  "priority": 5,
+  "id": "550e8400-e29b-41d4-a716-446655440004",
+  "request": {
+    "method": "POST",
+    "url": "/api/Auth",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.UserName",
+        "equalTo": "INVALID"
+      }
+    ]
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "token": null,
+      "token_type": null,
+      "Status": false,
+      "message": "Incorrect Username"
+    }
+  }
+}
+
